@@ -2,6 +2,5 @@
   url: testdomain.com/health
   method: GET
   headers:
-    - name: 
-      header: 
+    Authorization: Bearer exampleTestToken
 
