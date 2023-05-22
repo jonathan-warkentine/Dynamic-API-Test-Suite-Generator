@@ -1,5 +1,6 @@
 - group: testGroup1
   - name: test1
+    description: health check should return 200
     url: https://httpstat.us/200
     method: GET
     headers:
