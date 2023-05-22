@@ -1,9 +1,15 @@
-const allRequests = require('./utils/requests');
+const tests = require('./utils/requests');
+const generateTests = require('./utils/generateTests');
 
-Promise.all(allRequests)
-    .then(responses => {
-        console.log(responses);
+let mochaTestSuite;
+
+// gather all API call requests into a single promise
+Promise.all(tests.map(test => test.request))
+    .then( () => {
+        mochaTestSuite = generateTests(tests);
     })
     .catch(err => {
         console.error(err);
       });
+
+testSuite.

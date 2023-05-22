@@ -1,6 +1,7 @@
-- name: test1
-  url: https://httpstat.us/200
-  method: GET
-  headers:
-    Authorization: Bearer exampleTestToken
+- group: testGroup1
+  - name: test1
+    url: https://httpstat.us/200
+    method: GET
+    headers:
+      Authorization: Bearer exampleTestToken
 
