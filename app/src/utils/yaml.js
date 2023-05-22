@@ -1,11 +1,15 @@
+const path = require('path');
 const fs = require('fs');
 const yaml = require('js-yaml');
 
-try {
-  let fileContents = fs.readFileSync('./path/to/your/file.yaml', 'utf8');
-  let data = yaml.load(fileContents);
+const filePath = path.join(__dirname, '../tests.yml');
 
-  console.log(data);
+let data;
+try {
+  let fileContents = fs.readFileSync(filePath, 'utf8');
+  data = yaml.load(fileContents);
 } catch (e) {
   console.error(e);
 }
+
+module.exports = data;
