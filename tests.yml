@@ -1,5 +1,5 @@
 - name: test1
-  url: testdomain.com/health
+  url: https://httpstat.us/200
   method: GET
   headers:
     Authorization: Bearer exampleTestToken

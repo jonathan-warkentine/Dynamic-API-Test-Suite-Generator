@@ -11,3 +11,6 @@ In `tests.yml`, populate an array of tests. Each test has the following properti
 - `headers` : [array] an array of the headers to be included in the test
     - `name` : [string] the name of the header (eg `bearer`)
     
+
+## TODO: 
+- [ ] consider mapping the yaml file to a JS model object class instead of parsing directly, to allow for more rigid typing and the potential to add methods etc
